@@ -1,0 +1,25 @@
+body {
+  background-image: url(weatherr.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.content {
+  color: white;
+  font-size: 25px;
+  font-family: roboto;
+}
+
+.sicaklik {
+  font-size: 100px;
+}
+
+.baslik {
+  font-family: roboto;
+}
+
+.blur {
+  backdrop-filter: blur(5px);
+}
