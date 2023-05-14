@@ -10,8 +10,6 @@ function animasyonyukle(Id, yol) {
   return lottie.loadAnimation(animationOptions);
 }
 
-// Lottie animasyonlarını yükleyin ve oynatın
-// var animation1 = animasyonyukle("hareketli", "weatherr.json");
 var animation2 = animasyonyukle("sekil", "../lotties/kar.json");
 var animation3 = animasyonyukle("bulutt", "../lotties/bulut.json");
 var animation4 = animasyonyukle("gunes", "../lotties/gunes.json");
@@ -22,15 +20,6 @@ var animation8 = animasyonyukle("hava", "../lotties/hava.json");
 var animation9 = animasyonyukle("degisen", "../lotties/degisen.json");
 var animation10 = animasyonyukle("simsek2", "../lotties/simsek2.json");
 var animation11 = animasyonyukle("hava2", "../lotties/hava2.json");
-
-// const sekil = document.getElementById("sekil");
-// lottie.loadAnimation1({
-//   container: sekil,
-//   renderer: "svg",
-//   loop: true,
-//   autoplay: true,
-//   path: "sekill.json",
-// });
 
 const url = "https://api.openweathermap.org/data/2.5/";
 const key = "2d57f078684d05f3fa32a1dc4ad8e273";
