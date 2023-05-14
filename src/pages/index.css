@@ -1,107 +1,11 @@
 body {
-  background-image: url(../images/bgweather.jpg);
+  background-image: url(../images/weather_bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
-
-.content {
-  color: white;
-  font-size: 25px;
-  font-family: roboto;
-}
-
-.sicaklik {
-  font-size: 80px;
-}
-
-.baslik {
-  font-family: roboto;
-}
-
-.blur {
-  backdrop-filter: blur(5px);
-}
-
-/* #hareketli {
-  width: 74px;
-  height: 68px;
-  position: absolute;
-  left: 520px;
-  top: 125px;
-} */
-#sekil {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  right: 400px;
-  top: 300px;
-}
-#bulutt {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  left: 400px;
-  top: 300px;
-}
-#gunes {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  right: 400px;
-  top: 150px;
-}
-#yagmur {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  left: 400px;
-  top: 150px;
-}
-#simsek {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  right: 500px;
-  top: 300px;
-}
-#gunes2 {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  left: 500px;
-  top: 300px;
-}
-#hava {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  right: 470px;
-}
-#degisen {
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  left: 450px;
-  top: 20px;
-}
-
-#simsek2 {
-  width: 55px;
-  height: 55px;
-  position: absolute;
-  bottom: 150px;
-  left: 500px;
-}
-#hava2 {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  bottom: 158px;
-  right: 500px;
-}
-#uzay {
+#side_Picture {
   width: 22%;
   height: 100%;
   position: absolute;
@@ -110,11 +14,96 @@ body {
   background-color: #0000;
 }
 
-#uzay2 {
+#side_Picture2 {
   width: 21.5%;
   height: 100%;
   position: absolute;
   top: 0px;
   left: 0px;
   background-color: #0000;
+}
+
+.content {
+  color: white;
+  font-size: 25px;
+  font-family: roboto;
+}
+
+.temperature {
+  font-size: 80px;
+}
+
+.project_Title {
+  font-family: roboto;
+}
+
+#lottie_1 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 400px;
+  top: 300px;
+}
+#lottie_2 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 400px;
+  top: 300px;
+}
+#lottie_3 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 400px;
+  top: 150px;
+}
+#lottie_4 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 400px;
+  top: 150px;
+}
+#lottie_5 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 500px;
+  top: 300px;
+}
+#lottie_6 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 500px;
+  top: 300px;
+}
+#lottie_7 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 470px;
+}
+
+#lottie_8 {
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  bottom: 150px;
+  left: 500px;
+}
+#lottie_9 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: 158px;
+  right: 500px;
+}
+#lottie_10 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 450px;
+  top: 20px;
 }

@@ -1,62 +1,60 @@
-function animasyonyukle(Id, yol) {
-  var Id = document.getElementById(Id);
-  var animationOptions = {
-    container: Id,
+function lottie_Load(lottie_Id, lottie_Path) {
+  var lottie_Id = document.getElementById(lottie_Id);
+  var lottie_options = {
+    container: lottie_Id,
     renderer: "svg",
     loop: true,
     autoplay: true,
-    path: yol,
+    path: lottie_Path,
   };
-  return lottie.loadAnimation(animationOptions);
-}
 
-var animation2 = animasyonyukle("sekil", "../lotties/kar.json");
-var animation3 = animasyonyukle("bulutt", "../lotties/bulut.json");
-var animation4 = animasyonyukle("gunes", "../lotties/gunes.json");
-var animation5 = animasyonyukle("yagmur", "../lotties/yagmur.json");
-var animation6 = animasyonyukle("simsek", "../lotties/simsek.json");
-var animation7 = animasyonyukle("gunes2", "../lotties/gunes2.json");
-var animation8 = animasyonyukle("hava", "../lotties/hava.json");
-var animation9 = animasyonyukle("degisen", "../lotties/degisen.json");
-var animation10 = animasyonyukle("simsek2", "../lotties/simsek2.json");
-var animation11 = animasyonyukle("hava2", "../lotties/hava2.json");
+  return lottie.loadAnimation(lottie_options);
+}
+var animation1 = lottie_Load("lottie_1", "../lotties/lottie_1.json");
+var animation2 = lottie_Load("lottie_2", "../lotties/lottie_2.json");
+var animation3 = lottie_Load("lottie_3", "../lotties/lottie_3.json");
+var animation4 = lottie_Load("lottie_4", "../lotties/lottie_4.json");
+var animation5 = lottie_Load("lottie_5", "../lotties/lottie_5.json");
+var animation6 = lottie_Load("lottie_6", "../lotties/lottie_6.json");
+var animation7 = lottie_Load("lottie_7", "../lotties/lottie_7.json");
+var animation8 = lottie_Load("lottie_8", "../lotties/lottie_8.json");
+var animation9 = lottie_Load("lottie_9", "../lotties/lottie_9.json");
+var animation10 = lottie_Load("lottie_10", "../lotties/lottie_10.json");
 
 const url = "https://api.openweathermap.org/data/2.5/";
 const key = "2d57f078684d05f3fa32a1dc4ad8e273";
 
-function tusKontrol() {
-  HavaDurumuVerisi(aranansehir.value);
+function search_Key() {
+  weather_data(city_Search.value);
 }
+const city_Search = document.getElementById("city_Search");
 
-const aranansehir = document.getElementById("aranansehir");
-
-const HavaDurumuVerisi = (sehir) => {
-  fetch(`${url}weather?q=${sehir}&appid=${key}&units=metric&lang=tr`)
-    .then((veri) => {
-      return veri.json();
+const weather_data = (city) => {
+  fetch(`${url}weather?q=${city}&appid=${key}&units=metric&lang=tr`)
+    .then((data) => {
+      return data.json();
     })
-    .then(Sonuc);
+    .then(result);
 };
 
-const Sonuc = (veri) => {
-  var sehir = document.querySelector(".sehir");
-  sehir.innerText = `${veri.name}`.toUpperCase();
-  var sicaklik = document.querySelector(".sicaklik");
-  sicaklik.innerText = Math.trunc(`${veri.main.temp}`) + "°";
-  console.log(veri);
+result = (data) => {
+  var city = document.querySelector(".city");
+  city.innerText = `${data.name}`.toUpperCase();
+  var temperature = document.querySelector(".temperature");
+  temperature.innerText = Math.trunc(`${data.main.temp}`) + "°";
 
-  var minmax = document.querySelector(".minmax");
-  minmax.innerText =
+  var min_Max_Temperature = document.querySelector(".min_Max_Temperature");
+  min_Max_Temperature.innerText =
     "E.Y SICAKLIK : " +
-    Math.trunc(`${veri.main.temp_max}`) +
+    Math.trunc(`${data.main.temp_max}`) +
     "° E.D SICAKLIK : " +
-    Math.trunc(`${veri.main.temp_min}`) +
+    Math.trunc(`${data.main.temp_min}`) +
     "°";
 
-  var aciklama = document.querySelector(".aciklama");
-  aciklama.innerText = `${veri.weather[0].description}`.toUpperCase();
+  var information = document.querySelector(".information");
+  information.innerText = `${data.weather[0].description}`.toUpperCase();
 
-  const havaicon = `${veri.weather[0].icon}`;
-  const havaiconurl = `https://openweathermap.org/img/wn/${havaicon}@2x.png`;
-  document.querySelector(".hava-icon").src = havaiconurl;
+  const weather_Icons = `${data.weather[0].icon}`;
+  const weather_Icons_Url = `https://openweathermap.org/img/wn/${weather_Icons}@2x.png`;
+  document.querySelector(".weather_Icon").src = weather_Icons_Url;
 };
